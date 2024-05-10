@@ -11,9 +11,10 @@ app.use(express.urlencoded({extended: false}))
 
 //Routes
 app.get('/', (req, res)=> {
-    res.send('TodoList API by Moralist')
+    res.send('Product API by Moralist')
 })
 
+<<<<<<< HEAD
 app.get('/product', async(req, res) => {
     try {
         const product = await Product.find({});
@@ -29,6 +30,10 @@ app.get('/product/:id', async(req, res) => {
     } catch (error) {
         res.status(500).json({message: error.message})
     }
+=======
+app.listen(3000, () => {
+    console.log('Product App listening on port 3000')
+>>>>>>> 07d192228a3d2aec1dfd9f4652b7fa45e13005f5
 })
 
 app.post('/product', async(req, res) => {
